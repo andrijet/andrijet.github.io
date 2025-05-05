@@ -213,7 +213,7 @@
                             <option value="Neotokyo">尼奥未来城</option>
                             <option value="Nihal">阿里安特/玛加提亚</option>
                             <option value="OrbNath">天空之城/冰封雪域</option>
-                            <option value="PQ">组队任务</option>
+                            <option value="PQ">组队任务/转职</option>
                             <option value="Singapore">马来西亚/新加坡</option>
                             <option value="Taiwan">西门町/不夜城/101大道</option>
                             <option value="Thailand">水上市场/黄金寺院</option>
