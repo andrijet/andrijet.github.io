@@ -175,51 +175,51 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="mobLevel">Level:</label>
+                        <label for="mobLevel">怪物等级:</label>
                         <input type="number" id="mobLevel" min="1" max ="200" value="1">
                         <br>
-                        <label for="mobAvoid">Avoid:</label>
+                        <label for="mobAvoid">怪物闪避:</label>
                         <input type="number" id="mobAvoid" min="0" max ="999" value="0">
                         
                     </td>
                     <td rowspan="2">
-                        <label for="level">Level:</label>
+                        <label for="level">人物等级:</label>
 					    <input type="number" id="level" min="1" max ="200" value="1">
 					    <br>
 					    <input type="radio" id="physical" name="type" onclick="dmgType('ACC:')" checked style="width:auto">
-					    <label for="physical">Physical</label>
+					    <label for="physical">物理</label>
 					    <br>
 					    <input type="radio" id="magical" name="type" onclick="dmgType('INT:')" style="width:auto">
-					    <label for="magical">Magical</label>
+					    <label for="magical">魔法</label>
 					    <br>
-					    <label for="mainstat" id="dmgType">ACC:</label>
+					    <label for="mainstat" id="dmgType">命中:</label>
 					    <input type="number" id="mainstat" min="4" max ="999" value="4">
 					    <br>
-					    <label for="luk" id="dmgType">LUK:</label>
+					    <label for="luk" id="dmgType">运气:</label>
 					    <input type="number" id="luk" disabled="true" min="4" max ="999" value="4">
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <select size="7" class="areas" onchange="worldSelect(this.value)">
-                            <option value="all">All Worlds</option>
+                            <option value="all">所有区域</option>
                             <option value="Bosses">Bosses</option>
-                            <option value="Aqua">Aqua Road</option>
-                            <option value="China">China</option>
-                            <option value="LudusLake">Ludibrium/KFT/Omega</option>
-                            <option value="Masteria">Masteria</option>
-                            <option value="Minar">Minar</option>
-                            <option value="MuLung">Mu Lung</option>
-                            <option value="Neotokyo">Neotokyo</option>
-                            <option value="Nihal">Ariant/Magatia</option>
-                            <option value="OrbNath">Orbis/El Nath</option>
-                            <option value="PQ">PQ/Job</option>
-                            <option value="Singapore">Singapore</option>
-                            <option value="Taiwan">Taiwan</option>
-                            <option value="Thailand">Thailand</option>
-                            <option value="ToT">Temple of Time</option>
-                            <option value="VicIsland">Victoria Island</option>
-                            <option value="Zipangu">Zipangu</option>
+                            <option value="Aqua">水下世界</option>
+                            <option value="China">东方神州</option>
+                            <option value="LudusLake">玩具城/艾琳森林/童话村/地球防御总部</option>
+                            <option value="Masteria">新叶城/闹鬼宅邸/绯红要塞</option>
+                            <option value="Minar">神木村/龙林</option>
+                            <option value="MuLung">百草堂/武陵</option>
+                            <option value="Neotokyo">尼奥未来城</option>
+                            <option value="Nihal">阿里安特/玛加提亚</option>
+                            <option value="OrbNath">天空之城/冰封雪域/狮子王城</option>
+                            <option value="PQ">组队任务/转职</option>
+                            <option value="Singapore">"马来西亚/新加坡"</option>
+                            <option value="Taiwan">西门町/不夜城/101大道</option>
+                            <option value="Thailand">水上市场/黄金寺院</option>
+                            <option value="ToT">时间神殿</option>
+                            <option value="VicIsland">金银岛</option>
+                            <option value="Zipangu">蘑菇神社/昭和村</option>
                         </select>
                     </td>
                 </tr>
@@ -235,13 +235,13 @@
                         </select>
                     </td>
                     <td>
-                        <label for="mob1acc">Accuracy for 1%:</label>
+                        <label for="mob1acc">1% 命中:</label>
                         <input type="text" id="mob1acc" size="10" disabled="true">
                         <br>
-                        <label for="mob100acc">Accuracy for 100%:</label>
+                        <label for="mob100acc">100% 命中:</label>
                         <input type="text" id="mob100acc" size="8" disabled="true">
                         <br>
-                        <label for="mobRate">Hit rate:</label>
+                        <label for="mobRate">命中概率:</label>
                         <input type="text" id="mobRate" size="17" disabled="true">
                     </td>
                 </tr>
@@ -252,13 +252,13 @@
                         </a>   
                     </td>
                     <td>
-                        <label for="weak">Weak:</label>
+                        <label for="weak">弱:</label>
                         <label id="weak">-</label>
                         <br>
-                        <label for="strong">Strong:</label>
+                        <label for="strong">抗:</label>
                         <label id="strong">-</label>
                         <br>
-                        <label for="immune">Immune:</label>
+                        <label for="immune">免疫:</label>
                         <label id="immune">-</label>
                         <br>
                         <label for="HP">HP:</label>
