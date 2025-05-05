@@ -54,7 +54,7 @@
             function clearForm(){
                 document.calc.reset();
                 document.getElementById("luk").disabled=true;
-                document.getElementById("dmgType").innerHTML='ACC:';
+                document.getElementById("dmgType").innerHTML='命中:';
                 document.getElementById("liblink").href='';
                 document.getElementById("mobPic").src='';
                 document.getElementById('HP').innerHTML = '-';
@@ -62,7 +62,7 @@
                 document.getElementById('weak').innerHTML = '-';
                 document.getElementById('strong').innerHTML = '-';
                 document.getElementById('immune').innerHTML = '-';
-                $('#mobs').empty().append('<option value="' + "null" + '">' + 'Select a world' + '</option>');
+                $('#mobs').empty().append('<option value="' + "null" + '">' + '选择一个区域' + '</option>');
                 
             }
             var loadedjson;
