@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <title>ML Accuracy Calculator</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
         <style>
             table, th, td{
                 border: 2px solid black;
@@ -54,7 +54,7 @@
             function clearForm(){
                 document.calc.reset();
                 document.getElementById("luk").disabled=true;
-                document.getElementById("dmgType").innerHTML='ACC:';
+                document.getElementById("dmgType").innerHTML='人物命中:';
                 document.getElementById("liblink").href='';
                 document.getElementById("mobPic").src='';
                 document.getElementById('HP').innerHTML = '-';
@@ -62,7 +62,7 @@
                 document.getElementById('weak').innerHTML = '-';
                 document.getElementById('strong').innerHTML = '-';
                 document.getElementById('immune').innerHTML = '-';
-                $('#mobs').empty().append('<option value="' + "null" + '">' + 'Select a world' + '</option>');
+                $('#mobs').empty().append('<option value="' + "null" + '">' + '请选择一个区域' + '</option>');
                 
             }
             var loadedjson;
@@ -90,7 +90,7 @@
 				document.getElementById("dmgType").innerHTML=type;
             }
             function worldSelect(world){
-				$.getJSON('https://mrsoupman.github.io/Maple-ACC-calculator/Monsters/' + world + '.json',function(data){
+				$.getJSON('Monsters/' + world + '.json',function(data){
 					loadedjson = data;
 					$('#mobs').empty();
 					$.each(data, function(key, value) {
@@ -100,7 +100,7 @@
             }
             function mobSelect(mob){
 				if(mob != "null"){
-                    document.getElementById('mobPic').src = 'https://mrsoupman.github.io/Maple-ACC-calculator/images/' + loadedjson[mob]["id"] + '.png';
+                    document.getElementById('mobPic').src = 'images/' + loadedjson[mob]["id"] + '.png';
                     document.getElementById('mobLevel').value = loadedjson[mob]["level"];
                     document.getElementById('mobAvoid').value = loadedjson[mob]["avoid"];
                     document.getElementById('HP').innerHTML = loadedjson[mob]["hp"];
@@ -170,78 +170,78 @@
         <form name="calc">
             <table style="margin-left:auto; margin-right: auto;">
                 <tr>
-                    <th>Monster's stats</th>
-                    <th>Character Stats</th>
+                    <th>怪物属性</th>
+                    <th>人物属性</th>
                 </tr>
                 <tr>
                     <td>
-                        <label for="mobLevel">Level:</label>
+                        <label for="mobLevel">怪物等级:</label>
                         <input type="number" id="mobLevel" min="1" max ="200" value="1">
                         <br>
-                        <label for="mobAvoid">Avoid:</label>
+                        <label for="mobAvoid">怪物闪避:</label>
                         <input type="number" id="mobAvoid" min="0" max ="999" value="0">
                         
                     </td>
                     <td rowspan="2">
-                        <label for="level">Level:</label>
+                        <label for="level">人物等级:</label>
 					    <input type="number" id="level" min="1" max ="200" value="1">
 					    <br>
-					    <input type="radio" id="physical" name="type" onclick="dmgType('ACC:')" checked style="width:auto">
-					    <label for="physical">Physical</label>
+					    <input type="radio" id="physical" name="type" onclick="dmgType('人物命中:')" checked style="width:auto">
+					    <label for="physical">物理命中</label>
 					    <br>
-					    <input type="radio" id="magical" name="type" onclick="dmgType('INT:')" style="width:auto">
-					    <label for="magical">Magical</label>
+					    <input type="radio" id="magical" name="type" onclick="dmgType('智力:')" style="width:auto">
+					    <label for="magical">魔法命中</label>
 					    <br>
-					    <label for="mainstat" id="dmgType">ACC:</label>
+					    <label for="mainstat" id="dmgType">命中:</label>
 					    <input type="number" id="mainstat" min="4" max ="999" value="4">
 					    <br>
-					    <label for="luk" id="dmgType">LUK:</label>
+					    <label for="luk" id="dmgType">运气属性:</label>
 					    <input type="number" id="luk" disabled="true" min="4" max ="999" value="4">
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <select size="7" class="areas" onchange="worldSelect(this.value)">
-                            <option value="all">All Worlds</option>
+                            <option value="all">所有世界</option>
                             <option value="Bosses">Bosses</option>
-                            <option value="Aqua">Aqua Road</option>
-                            <option value="China">China</option>
-                            <option value="LudusLake">Ludibrium/KFT/Omega</option>
-                            <option value="Masteria">Masteria</option>
-                            <option value="Minar">Minar</option>
-                            <option value="MuLung">Mu Lung</option>
-                            <option value="Neotokyo">Neotokyo</option>
-                            <option value="Nihal">Ariant/Magatia</option>
-                            <option value="OrbNath">Orbis/El Nath</option>
-                            <option value="PQ">PQ/Job</option>
-                            <option value="Singapore">Singapore</option>
-                            <option value="Taiwan">Taiwan</option>
-                            <option value="Thailand">Thailand</option>
-                            <option value="ToT">Temple of Time</option>
-                            <option value="VicIsland">Victoria Island</option>
-                            <option value="Zipangu">Zipangu</option>
+                            <option value="Aqua">水下世界</option>
+                            <option value="China">东方神州</option>
+                            <option value="LudusLake">玩具城/童话村/地球防御总部</option>
+                            <option value="Masteria">新叶城/闹鬼宅邸/绯红要塞</option>
+                            <option value="Minar">神木村</option>
+                            <option value="MuLung">百草堂/武陵</option>
+                            <option value="Neotokyo">尼奥未来城</option>
+                            <option value="Nihal">阿里安特/玛加提亚</option>
+                            <option value="OrbNath">天空之城/冰封雪域</option>
+                            <option value="PQ">组队任务</option>
+                            <option value="Singapore">马来西亚/新加坡</option>
+                            <option value="Taiwan">西门町/不夜城/101大道</option>
+                            <option value="Thailand">水上市场/黄金寺院</option>
+                            <option value="ToT">时间神殿</option>
+                            <option value="VicIsland">金银岛</option>
+                            <option value="Zipangu">蘑菇神社/昭和村</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <button type="button" onclick="sortByLevel()">Level</button>
-                        <button type="button" onclick="sortByAlpha()">Alpha</button>
+                        <button type="button" onclick="sortByLevel()">按等级排序</button>
+                        <button type="button" onclick="sortByAlpha()">按名字排序</button>
                         <br>
-                        <input autocomplete="off" id="search" size="9" value="Search..." style="text-align: left;"></input>
+                        <input autocomplete="off" id="search" size="9" value="搜索..." style="text-align: left;"></input>
                         <br>
                         <select class="mobs" size="7" name="mobs" id="mobs" onchange="mobSelect(this.value)">
                             <option value="null">Select a world</option>
                         </select>
                     </td>
                     <td>
-                        <label for="mob1acc">Accuracy for 1%:</label>
+                        <label for="mob1acc">1%概率命中:</label>
                         <input type="text" id="mob1acc" size="10" disabled="true">
                         <br>
-                        <label for="mob100acc">Accuracy for 100%:</label>
+                        <label for="mob100acc">100%概率命中:</label>
                         <input type="text" id="mob100acc" size="8" disabled="true">
                         <br>
-                        <label for="mobRate">Hit rate:</label>
+                        <label for="mobRate">命中概率:</label>
                         <input type="text" id="mobRate" size="17" disabled="true">
                     </td>
                 </tr>
@@ -252,13 +252,13 @@
                         </a>   
                     </td>
                     <td>
-                        <label for="weak">Weak:</label>
+                        <label for="weak">弱:</label>
                         <label id="weak">-</label>
                         <br>
-                        <label for="strong">Strong:</label>
+                        <label for="strong">抗:</label>
                         <label id="strong">-</label>
                         <br>
-                        <label for="immune">Immune:</label>
+                        <label for="immune">免疫:</label>
                         <label id="immune">-</label>
                         <br>
                         <label for="HP">HP:</label>
@@ -271,8 +271,8 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <button type="button" onclick="clearForm()">Reset</button>
-                        <button type="button" onclick="doSomeMath()">Calculate</button>
+                        <button type="button" onclick="clearForm()">重置</button>
+                        <button type="button" onclick="doSomeMath()">计算</button>
                     </td>
                 </tr>
             </table>
