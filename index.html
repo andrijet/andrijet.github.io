@@ -170,8 +170,8 @@
         <form name="calc">
             <table style="margin-left:auto; margin-right: auto;">
                 <tr>
-                    <th>Monster's stats</th>
-                    <th>Character Stats</th>
+                    <th>怪物属性</th>
+                    <th>玩家属性</th>
                 </tr>
                 <tr>
                     <td>
@@ -228,10 +228,10 @@
                         <button type="button" onclick="sortByLevel()">Level</button>
                         <button type="button" onclick="sortByAlpha()">Alpha</button>
                         <br>
-                        <input autocomplete="off" id="search" size="9" value="Search..." style="text-align: left;"></input>
+                        <input autocomplete="off" id="search" size="9" value="查找..." style="text-align: left;"></input>
                         <br>
                         <select class="mobs" size="7" name="mobs" id="mobs" onchange="mobSelect(this.value)">
-                            <option value="null">Select a world</option>
+                            <option value="null">选择一个区域</option>
                         </select>
                     </td>
                     <td>
@@ -271,8 +271,8 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <button type="button" onclick="clearForm()">Reset</button>
-                        <button type="button" onclick="doSomeMath()">Calculate</button>
+                        <button type="button" onclick="clearForm()">重置</button>
+                        <button type="button" onclick="doSomeMath()">计算</button>
                     </td>
                 </tr>
             </table>
