@@ -69,15 +69,15 @@
             function elementChecker(array){
                 let arr = new Array();
                 if(array[0])
-                    arr.push('Ice');
+                    arr.push('冰');
                 if(array[1])
-                    arr.push('Lightning');
+                    arr.push('雷');
                 if(array[2])
-                    arr.push('Fire');
+                    arr.push('火');
                 if(array[3])
-                    arr.push('Poison')
+                    arr.push('毒')
                 if(array[4])
-                    arr.push('Holy');
+                    arr.push('圣');
                 if(arr.length == 0)
                     arr.push('-');
                 return arr;
