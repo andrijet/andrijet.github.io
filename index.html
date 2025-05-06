@@ -33,14 +33,14 @@
 	            };
                 $(document).on('focus','#search',function() {
                     var inp = $(this).val();
-                    if (inp == 'Search...')
+                    if (inp == '搜索...')
                         $(this).val('');
                 });
                 $(document).on('focusout','#search',function() {
                     var inp = $(this).val();
                     if (inp == '')
                     {
-                        $(this).val('Search...');    
+                        $(this).val('搜索...');    
                     }
                 });
                 $(document).on('keyup','#search',function(){
